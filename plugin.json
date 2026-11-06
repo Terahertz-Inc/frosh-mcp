@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "frosh",
+  "version": "0.2.0",
+  "description": "Search and read public frosh.org docs and blog for the private MediaWiki platform.",
+  "author": {
+    "name": "Terahertz, Inc.",
+    "email": "support@frosh.org",
+    "url": "https://frosh.org"
+  },
+  "homepage": "https://frosh.org",
+  "repository": "https://github.com/Terahertz-Inc/frosh-mcp",
+  "license": "MIT",
+  "keywords": [
+    "frosh",
+    "mediawiki",
+    "wiki",
+    "docs",
+    "mcp"
+  ]
+}
