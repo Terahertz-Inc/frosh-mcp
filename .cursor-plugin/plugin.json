@@ -10,5 +10,12 @@
   "homepage": "https://frosh.org",
   "repository": "https://github.com/Terahertz-Inc/frosh-mcp",
   "license": "MIT",
-  "keywords": ["mcp", "mediawiki", "wiki", "documentation", "frosh"]
+  "keywords": [
+    "mcp",
+    "mediawiki",
+    "wiki",
+    "documentation",
+    "frosh"
+  ],
+  "logo": "assets/logo.png"
 }
