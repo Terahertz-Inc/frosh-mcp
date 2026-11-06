@@ -3,7 +3,7 @@
   "name": "org.frosh/mcp",
   "title": "Frosh",
   "description": "Read-only Frosh MCP: search and read public frosh.org docs, blog and overview.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "websiteUrl": "https://frosh.org",
   "remotes": [
     {
