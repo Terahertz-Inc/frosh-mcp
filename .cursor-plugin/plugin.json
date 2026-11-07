@@ -2,7 +2,7 @@
   "name": "frosh",
   "displayName": "Frosh",
   "description": "Search and read public frosh.org docs, blog posts, and product overview for the private MediaWiki platform.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Terahertz, Inc.",
     "email": "support@frosh.org"
