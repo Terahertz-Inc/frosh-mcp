@@ -1,0 +1,62 @@
+{
+  "name": "frosh-mcp",
+  "version": "0.2.1",
+  "mcpName": "org.frosh/mcp",
+  "description": "Stdio MCP server that proxies to Frosh's hosted Streamable HTTP MCP at https://frosh.org/mcp (public docs/blog tools; optional API key for wiki tools)",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "frosh-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "frosh",
+    "mediawiki",
+    "wiki",
+    "docs",
+    "stdio",
+    "claude",
+    "cursor",
+    "streamable-http"
+  ],
+  "author": {
+    "name": "Terahertz, Inc.",
+    "email": "support@frosh.org",
+    "url": "https://frosh.org"
+  },
+  "license": "MIT",
+  "homepage": "https://frosh.org/docs/mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Terahertz-Inc/frosh-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Terahertz-Inc/frosh-mcp/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "typescript": "^5.7.0"
+  }
+}
