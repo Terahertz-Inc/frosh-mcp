@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frosh MCP — public agent access to Frosh</title>
+    <meta
+      name="description"
+      content="GitHub Pages home for the public Frosh MCP server. The Frosh product lives at frosh.org."
+    />
+    <link rel="canonical" href="https://terahertz-inc.github.io/frosh-mcp/" />
+    <link rel="icon" href="logo.png" type="image/png" />
+    <style>
+      :root {
+        --ink: #1b1428;
+        --paper: #f4efe4;
+        --card: #fffaf1;
+        --accent: #5b45f5;
+        --muted: #5c5668;
+        --rule: #ddd4c4;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+
+      body {
+        font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+        background:
+          radial-gradient(1200px 500px at 10% -10%, rgba(91, 69, 245, 0.12), transparent 55%),
+          var(--paper);
+        color: var(--ink);
+        line-height: 1.5;
+      }
+
+      main {
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 4.5rem 1.5rem 3rem;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        margin-bottom: 2rem;
+      }
+
+      header img {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+      }
+
+      .eyebrow {
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      h1 {
+        font-size: clamp(2.1rem, 6vw, 3.1rem);
+        line-height: 1.05;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        margin: 0 0 1rem;
+      }
+
+      p {
+        margin: 0 0 1rem;
+        font-size: 1.15rem;
+      }
+
+      .lede {
+        color: var(--muted);
+      }
+
+      .product {
+        background: var(--card);
+        border: 1px solid var(--rule);
+        border-radius: 18px;
+        padding: 1.35rem 1.4rem 1.25rem;
+        margin: 1.75rem 0 1.5rem;
+        box-shadow: 0 12px 30px rgba(27, 20, 40, 0.06);
+      }
+
+      .product p {
+        margin-bottom: 0.85rem;
+      }
+
+      .product a[href="https://frosh.org"] {
+        display: inline-block;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #fff;
+        background: var(--accent);
+        text-decoration: none;
+        padding: 0.7rem 1.15rem;
+        border-radius: 999px;
+      }
+
+      .product a[href="https://frosh.org"]:hover,
+      .product a[href="https://frosh.org"]:focus-visible {
+        filter: brightness(1.08);
+      }
+
+      nav {
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      nav a {
+        color: var(--ink);
+      }
+
+      footer {
+        margin-top: 2.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--rule);
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      footer a {
+        color: var(--ink);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="logo.png" width="56" height="56" alt="Frosh" />
+        <div class="eyebrow">Public MCP repository</div>
+      </header>
+
+      <h1>A doorway for agents, not the wiki itself.</h1>
+      <p class="lede">
+        This GitHub Pages site belongs to the public Frosh MCP server: a
+        read-only Model Context Protocol endpoint that lets AI clients search
+        and read public Frosh documentation. Private wikis, the desktop app,
+        and the product live elsewhere.
+      </p>
+
+      <section class="product">
+        <p>
+          Frosh is the private MediaWiki platform this MCP describes. Start
+          there.
+        </p>
+        <p>
+          <a href="https://frosh.org">Go to Frosh</a>
+        </p>
+      </section>
+
+      <nav>
+        Optional setup notes:
+        <a href="https://frosh.org/docs/mcp-server">MCP server docs</a>
+        ·
+        <a href="https://github.com/Terahertz-Inc/frosh-mcp">this repository</a>
+      </nav>
+
+      <footer>
+        Terahertz, Inc. ·
+        <a href="https://frosh.org">frosh.org</a>
+      </footer>
+    </main>
+  </body>
+</html>
