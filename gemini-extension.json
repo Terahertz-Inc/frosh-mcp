@@ -1,0 +1,10 @@
+{
+  "name": "frosh",
+  "version": "0.2.1",
+  "description": "Frosh MCP: search and read public frosh.org docs and blog for the private MediaWiki platform.",
+  "mcpServers": {
+    "frosh": {
+      "httpUrl": "https://frosh.org/mcp"
+    }
+  }
+}
