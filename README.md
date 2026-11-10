@@ -4,18 +4,17 @@ Read-only [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server
 
 **Website:** [frosh.org](https://frosh.org) · **Docs:** [frosh.org/docs](https://frosh.org/docs) · **MCP docs:** [frosh.org/docs/mcp-server](https://frosh.org/docs/mcp-server)
 
-> **Status: launching.** The hosted endpoint below is being rolled out and may not answer yet. Watch this repo for the launch.
-
 | | |
 |---|---|
-| Endpoint (launching) | `https://frosh.org/mcp` |
+| Endpoint | `https://frosh.org/mcp` |
 | Transport | Streamable HTTP (stateless, JSON responses) |
-| Auth | None. Public, read-only |
+| Auth | None for public docs/blog tools. Optional Bearer API key for `wiki_*` tools on your own Frosh cloud wiki |
 | Registry name | `org.frosh/mcp` (see [`server.json`](server.json)) |
+| npm package | [`frosh-mcp`](https://www.npmjs.com/package/frosh-mcp) (stdio proxy) |
 
 ## Tools
 
-All tools are read-only and idempotent. They only see public frosh.org documentation, blog posts and the product overview. They cannot see or change any wiki, account or backup.
+Public tools are read-only and idempotent. They only see public frosh.org documentation, blog posts and the product overview. They cannot see or change any wiki, account or backup.
 
 | Tool | What it does |
 |---|---|
@@ -23,6 +22,8 @@ All tools are read-only and idempotent. They only see public frosh.org documenta
 | `read_page` | Full text of one public page by `slug`, e.g. `docs/quickstart` |
 | `list_pages` | Every public page the server can read, optionally filtered by `section` |
 | `about_frosh` | What Frosh is, plus key links (docs, quickstart, blog, desktop download) |
+
+`wiki_*` tools (when present on the live server) act on the caller's own Frosh cloud wiki and need a Frosh API key as a Bearer token. They are not covered by the public read-only guarantee above.
 
 ## Install
 
@@ -43,6 +44,35 @@ Add a remote MCP server with the URL `https://frosh.org/mcp`.
 ```
 
 ### Clients that only speak stdio (Claude Desktop, etc.)
+
+```json
+{
+  "mcpServers": {
+    "frosh": {
+      "command": "npx",
+      "args": ["-y", "frosh-mcp"]
+    }
+  }
+}
+```
+
+Optional wiki API key:
+
+```json
+{
+  "mcpServers": {
+    "frosh": {
+      "command": "npx",
+      "args": ["-y", "frosh-mcp"],
+      "env": {
+        "FROSH_API_KEY": "your-frosh-api-key"
+      }
+    }
+  }
+}
+```
+
+You can also use a generic remote bridge:
 
 ```json
 {
@@ -70,7 +100,7 @@ Add a remote MCP server with the URL `https://frosh.org/mcp`.
 
 ## Managing your own wiki
 
-This public server is docs-only. To manage pages, users and backups on your own wiki, use the local MCP that ships with the `froshwiki` CLI. See [MCP setup](https://frosh.org/docs/mcp-server).
+Public tools are docs-only. To manage pages, users and backups on your own wiki, use the local MCP that ships with the `froshwiki` CLI, or pass `FROSH_API_KEY` / an `Authorization: Bearer` header to the hosted endpoint. See [MCP setup](https://frosh.org/docs/mcp-server).
 
 ## Links
 
