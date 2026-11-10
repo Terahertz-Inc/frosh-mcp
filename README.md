@@ -1,5 +1,9 @@
 # Frosh MCP Server: search and read the Frosh docs from any AI agent
 
+[![MCP Registry](https://img.shields.io/badge/MCP%20Registry-listed-green)](https://registry.modelcontextprotocol.io/v0.1/servers?search=org.frosh%2Fmcp)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+
 Read-only [Model Context Protocol](https://modelcontextprotocol.io) (MCP) server for [Frosh](https://frosh.org), the platform for private MediaWiki sites: a cloud-hosted wiki portal at frosh.org and a desktop app for fully local wikis.
 
 **Website:** [frosh.org](https://frosh.org) · **Docs:** [frosh.org/docs](https://frosh.org/docs) · **MCP docs:** [frosh.org/docs/mcp-server](https://frosh.org/docs/mcp-server)
